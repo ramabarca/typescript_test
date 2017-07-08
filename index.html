@@ -5,17 +5,13 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Typescript test</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,18 +25,36 @@
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
-  </div>
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+	<div class="row">
+		<div class="twelve columns" style="margin-top: 10%">
+			<form id="form">
+                <div class="six columns">
+                    <input class="u-full-width" id="form-limit" type="number" value="50" />
+                </div>
+                <div class="six columns">
+                    <a class="button u-full-width" id="form-order" data-order="ASC" href="#">Ordine &uarr;</a>
+                </div>
+            </form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns" style="margin-top: 10%">
+			<canvas id="currency-chart" width="400" height="400"></canvas>
+		</div>
+	</div>
+</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- libs -->
+    <script type="text/javascript" src="js/dest/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dest/chart.min.js"></script>
+    <!-- app -->
+    <script type="text/javascript" src="js/dest/dummy.js"></script>
+    <script type="text/javascript" src="js/dest/app.js"></script>
+
 </body>
 </html>
