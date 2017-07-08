@@ -223,14 +223,16 @@
                             text: 'Valore di cambio delle monete rispetto all\'Euro'
                         },
                         tooltips: {
-                            custom: function(tooltip){
-                                if(tooltip.title){
-                                    var old_title = tooltip.title[0],
-                                        currency_label = CURRENCY_LABELS[old_title];
+                            callbacks: {
+                                afterTitle: function(item){
+                                    var current_item = item[0],
+                                        currency_label = CURRENCY_LABELS[current_item.yLabel],
+                                        before_label = '';
                                     
                                     if(currency_label){
-                                        tooltip.title[0] = currency_label + ' (' + old_title + ')';
+                                        before_label = currency_label + ' ';
                                     }
+                                    return before_label;
                                 }
                             }
                         }
