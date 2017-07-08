@@ -1,7 +1,7 @@
 (function($){
     
     // static
-    const DEBUG = true;
+    const DEBUG = false;
     const CURRENCY_LABELS = {
     	AUD: 'Australian dollar',
 		BGN: 'Bulgarian lev',
@@ -63,13 +63,13 @@
             $('#form-order').click(function(e){
                 e.preventDefault();
                 var current_order = $(this).data('order'),
-                    input_label = 'Ordine', new_order;
+                    input_label, new_order;
 
                 if(current_order === 'ASC'){
-                    input_label += ' &darr;';
+                    input_label = 'Decrescente &darr;';
                     new_order = 'DESC';
                 } else if(current_order === 'DESC'){
-                    input_label += ' &uarr;';
+                    input_label = 'Crescente &uarr;';
                     new_order = 'ASC';
                 }
 
@@ -82,6 +82,7 @@
                     $this.update();
                 } else {
                     // TODO: error
+                    console.warn('Form input order error!');
                 }
             });
 
@@ -119,6 +120,7 @@
                     })
                     .fail(function(response){
                         // TODO: error
+                        console.warn('Request error!');
                     })
                     .always(function(response){})
             } else {
