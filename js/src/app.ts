@@ -3,37 +3,37 @@
     // static
     const DEBUG = false;
     const CURRENCY_LABELS = {
-    	AUD: 'Australian dollar',
-		BGN: 'Bulgarian lev',
-		BRL: 'Brazilian real',
-		CAD: 'Canadian dollar',
-		CHF: 'Swiss franc',
-		CNY: 'Chinese renminbi',
-		CZK: 'Czech koruna',
-		DKK: 'Danish krone',
-		GBP: 'British pound',
-		HKD: 'Hong Kong dollar',
-		HRK: 'Croatian kuna',
-		HUF: 'Hungarian forint',
-		IDR: 'Indonesian rupiah',
-		ILS: 'Israeli new sheqel',
-		INR: 'Indian rupee',
-		JPY: 'Japanese yen',
-		KRW: 'South Korean won',
-		MXN: 'Mexican peso',
-		MYR: 'Malaysian ringgit',
-		NOK: 'Norwegian krone',
-		NZD: 'New Zealand dollar',
-		PHP: 'Philippine peso',
-		PLN: 'Polish zloty',
-		RON: 'Romanian leu',
-		RUB: 'Russian ruble',
-		SEK: 'Swedish krona',
-		SGD: 'Singapore dollar',
-		THB: 'Thai baht',
-		TRY: 'Turkish lira',
-		USD: 'US dollar',
-		ZAR: 'South African rand',
+        AUD: 'Australian dollar',
+        BGN: 'Bulgarian lev',
+        BRL: 'Brazilian real',
+        CAD: 'Canadian dollar',
+        CHF: 'Swiss franc',
+        CNY: 'Chinese renminbi',
+        CZK: 'Czech koruna',
+        DKK: 'Danish krone',
+        GBP: 'British pound',
+        HKD: 'Hong Kong dollar',
+        HRK: 'Croatian kuna',
+        HUF: 'Hungarian forint',
+        IDR: 'Indonesian rupiah',
+        ILS: 'Israeli new sheqel',
+        INR: 'Indian rupee',
+        JPY: 'Japanese yen',
+        KRW: 'South Korean won',
+        MXN: 'Mexican peso',
+        MYR: 'Malaysian ringgit',
+        NOK: 'Norwegian krone',
+        NZD: 'New Zealand dollar',
+        PHP: 'Philippine peso',
+        PLN: 'Polish zloty',
+        RON: 'Romanian leu',
+        RUB: 'Russian ruble',
+        SEK: 'Swedish krona',
+        SGD: 'Singapore dollar',
+        THB: 'Thai baht',
+        TRY: 'Turkish lira',
+        USD: 'US dollar',
+        ZAR: 'South African rand',
     };
 
     // classes
@@ -146,7 +146,6 @@
         private order;
         private labels: string[] = [];
         private series: number[] = [];
-        private chart;
 
         constructor(rates, limit: number, order: string){
             this.rates = rates;
