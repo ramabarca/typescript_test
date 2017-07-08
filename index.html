@@ -30,18 +30,25 @@
 <div class="container">
 	<div class="row">
 		<div class="twelve columns" style="margin-top: 10%">
+            <h4>TypeScript currency test</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns">
 			<form id="form">
                 <div class="six columns">
+                    <label for="form-limit">Limite</label>
                     <input class="u-full-width" id="form-limit" type="number" value="50" />
                 </div>
                 <div class="six columns">
-                    <a class="button u-full-width" id="form-order" data-order="ASC" href="#">Ordine &uarr;</a>
+                    <label for="form-order">Ordine</label>
+                    <a class="button u-full-width" id="form-order" data-order="ASC" href="#">Crescente &uarr;</a>
                 </div>
             </form>
 		</div>
 	</div>
 	<div class="row">
-		<div class="twelve columns" style="margin-top: 10%">
+		<div class="twelve columns">
 			<canvas id="currency-chart" width="400" height="400"></canvas>
 		</div>
 	</div>
