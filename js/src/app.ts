@@ -102,6 +102,11 @@
                     }
                 }, 500);
             });
+
+			// prevent submit
+            $('#form').submit(function(e){
+                e.preventDefault();
+            });
         }
         
         // get currency json data  
@@ -193,15 +198,15 @@
         }
         render() {
             // new only once
-            var ctx = document.getElementById('currency-chart').getContext("2d"),
-                color = Chart.helpers.color;
-
             if(!CurrencyChart.chart){
+                var ctx = document.getElementById('currency-chart').getContext("2d"),
+                    color = Chart.helpers.color;
+
                 CurrencyChart.chart_data = {
                     labels: this.labels,
                     datasets:[{
                         label: 'valore',
-                        borderWidth: 1,
+                        borderWidth: 0,
                         backgroundColor: color('blue').alpha(0.5).rgbString(),
                         borderColor: 'blue',
                         data: this.series
@@ -211,9 +216,10 @@
                     type: 'horizontalBar',
                     data: CurrencyChart.chart_data,
                     options: {
+						maintainAspectRatio: false,
                         elements: {
                             rectangle: {
-                                borderWidth: 2,
+                                borderWidth: 1,
                             }
                         },
                         responsive: true,

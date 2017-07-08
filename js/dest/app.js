@@ -82,6 +82,9 @@
                     }
                 }, 500);
             });
+            $('#form').submit(function (e) {
+                e.preventDefault();
+            });
         };
         App.prototype.getCurrencyData = function () {
             var $this = this, url = "http://api.fixer.io/latest";
@@ -156,13 +159,13 @@
             this.setSeries();
         };
         CurrencyChart.prototype.render = function () {
-            var ctx = document.getElementById('currency-chart').getContext("2d"), color = Chart.helpers.color;
             if (!CurrencyChart.chart) {
+                var ctx = document.getElementById('currency-chart').getContext("2d"), color = Chart.helpers.color;
                 CurrencyChart.chart_data = {
                     labels: this.labels,
                     datasets: [{
                             label: 'valore',
-                            borderWidth: 1,
+                            borderWidth: 0,
                             backgroundColor: color('blue').alpha(0.5).rgbString(),
                             borderColor: 'blue',
                             data: this.series
@@ -172,9 +175,10 @@
                     type: 'horizontalBar',
                     data: CurrencyChart.chart_data,
                     options: {
+                        maintainAspectRatio: false,
                         elements: {
                             rectangle: {
-                                borderWidth: 2,
+                                borderWidth: 1,
                             }
                         },
                         responsive: true,
