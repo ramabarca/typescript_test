@@ -12,3 +12,8 @@ Test di programmazione di una applicazione sviluppata in TypeScript
 
 * Gestione errori lato html
 * Implementare l'ordinamento dei dati senza usufruire del metodo nativo `Array.protorype.sort()`
+
+## TEST
+
+* 1
+* 2
